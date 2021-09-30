@@ -31,7 +31,7 @@ class PrimaryCategorySeeder extends Seeder
             'id'      => 4,
             'name'    => '公共施設',
             'sort_no' => 4,
-        ]);        
+        ]);
         factory(PrimaryCategory::class)->create([
             'id'      => 5,
             'name'    => '人物・自動車',
