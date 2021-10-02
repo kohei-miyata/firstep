@@ -54,33 +54,33 @@ class SellController extends Controller
             ->with('status', '商品を出品しました。');
     }
 
-         /**
-      * 商品画像をリサイズして保存します
-      *
-      * @param UploadedFile $file アップロードされた商品画像
-      * @return string ファイル名
-      */
-     private function saveImage(UploadedFile $file): string
-     {
-         $tempPath = $this->makeTempPath();
- 
-         Image::make($file)->fit(300, 300)->save($tempPath);
- 
-         $filePath = Storage::disk('public')
-             ->putFile('item-images', new File($tempPath));
- 
-         return basename($filePath);
-     }
- 
-     /**
-      * 一時的なファイルを生成してパスを返します。
-      *
-      * @return string ファイルパス
-      */
-     private function makeTempPath(): string
-     {
-         $tmp_fp = tmpfile();
-         $meta   = stream_get_meta_data($tmp_fp);
-         return $meta["uri"];
-     }
+    /**
+     * 商品画像をリサイズして保存します
+     *
+     * @param UploadedFile $file アップロードされた商品画像
+     * @return string ファイル名
+     */
+    private function saveImage(UploadedFile $file): string
+    {
+        $tempPath = $this->makeTempPath();
+
+        Image::make($file)->fit(300, 300)->save($tempPath);
+
+        $filePath = Storage::disk('s3')
+            ->putFile('/', new File($tempPath));
+
+        return basename($filePath);
+    }
+
+    /**
+     * 一時的なファイルを生成してパスを返します。
+     *
+     * @return string ファイルパス
+     */
+    private function makeTempPath(): string
+    {
+        $tmp_fp = tmpfile();
+        $meta   = stream_get_meta_data($tmp_fp);
+        return $meta["uri"];
+    }
 }

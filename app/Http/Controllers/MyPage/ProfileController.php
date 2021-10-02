@@ -67,4 +67,6 @@ class ProfileController extends Controller
          $meta   = stream_get_meta_data($tmp_fp);
          return $meta["uri"];
      }
+
+     
 }
