@@ -1,12 +1,12 @@
 広告媒体主と広告主を繋ぐマッチングサービスです。
 
-使用技術
-* Laravel 7.25
-* PHP 7.3
-*　　MySQL
-* Nginx 
-* Docker/Docker compose
-* AWS
+使用技術<br>
+* Laravel 7.25<br>
+* PHP 7.3<br>
+*　　MySQL<br>
+* Nginx<br> 
+* Docker/Docker compose<br>
+* AWS<br>
  ◦S3
 
 
