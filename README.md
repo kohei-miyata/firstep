@@ -3,7 +3,7 @@
 使用技術<br>
 * Laravel 7.25<br>
 * PHP 7.3<br>
-*MySQL<br>
+・　MySQL<br>
 * Nginx<br> 
 * Docker/Docker compose<br>
 * AWS<br>
