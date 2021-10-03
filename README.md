@@ -3,11 +3,11 @@
 使用技術
 * Laravel 7.25
 * PHP 7.3
-* ◦MySQL
+*　　MySQL
 * Nginx 
 * Docker/Docker compose
 * AWS
-* ◦S3
+ ◦S3
 
 
 機能一覧<br>
